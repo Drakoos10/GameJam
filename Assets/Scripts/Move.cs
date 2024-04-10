@@ -47,16 +47,16 @@ public class Move : MonoBehaviour
         horizontal=Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal*velocidad,rb.velocity.y);
         if(horizontal!=0){
-            animator.SetBool("Move", true);
+            //animator.SetBool("Move", true);
         }else if(horizontal==0){
-            animator.SetBool("Move", false);
+            //animator.SetBool("Move", false);
         }
            
 
 
        if (Input.GetButtonDown("Jump") && isGrounded())
         {
-            animator.SetBool("Salto", true);
+            //animator.SetBool("Salto", true);
             rb.velocity = new Vector2(rb.velocity.x, speedSalto);
 
         }
@@ -68,7 +68,7 @@ public class Move : MonoBehaviour
 
         if (isGrounded() && rb.velocity.y <= 0) 
         {
-            animator.SetBool("Salto", false);   
+            //animator.SetBool("Salto", false);   
         }
 
          voltear();
